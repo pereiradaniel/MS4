@@ -1,5 +1,7 @@
+#define _CRT_SECURE_NO_WARNINGS
 #ifndef SDDS_VEHICLE_H__
 #define SDDS_VEHICLE_H__
+#include <iostream>
 #include "ReadWritable.h"
 namespace sdds {
 	class Vehicle : public ReadWritable {

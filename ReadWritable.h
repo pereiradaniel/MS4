@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #ifndef SDDS_READWRITABLE_H__
 #define SDDS_READWRITABLE_H__
 #include <iostream>
