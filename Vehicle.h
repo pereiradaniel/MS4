@@ -17,11 +17,11 @@ namespace sdds {
 		bool			isEmpty()const;
 		const char*		getLicensePlate()const;				// getter
 		const char*		getMakeModel()const;				// getter
-		void			setMakeModel()const;				// setter
+		void			setMakeModel(const char* value);	// setter
 		int				getParkingSpot()const;				// getter
 		void			setParkingSpot(int value);			// setter
-		bool operator=(const char* licensePlate) const;		// overload comparison operator
-		bool operator=(const Vehicle& v) const;				// overload comparison operator
+		bool operator==(const char* licensePlate) const;		// overload comparison operator
+		bool operator==(const Vehicle& v) const;				// overload comparison operator
 		std::istream&	read(std::istream& istr);
 		std::ostream&	write(std::ostream& ostr) const;
 	};
