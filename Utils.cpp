@@ -1,7 +1,3 @@
-// Util calls that will be needed:
-// Utils::toUpper(array_of_chars);
-// Utils::read(buffer, min, max, error_message, input_stream);
-
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <cstring>

@@ -4,11 +4,14 @@
 #include <iostream>
 #include "ReadWritable.h"
 namespace sdds {
+	const int MAX_PLATE_CHARS = 8;
+	const int MAX_MAKE_MODEL_CHARS = 60;
+	const int MIN_MAKE_MODEL_CHARS = 2;
 	class Vehicle : public ReadWritable {
 	private:
-		char	m_licensePlate[9];		// 8 characters + '0', static array
-		char*	m_makeModel;			// dynamic array
-		int		m_parkingSpot;			// 0 by default
+		char	m_licensePlate[9];
+		char*	m_makeModel;
+		int		m_parkingSpot;
 	public:
 		Vehicle();
 		Vehicle(const char* licensePlate, const char* makeModel);
@@ -17,13 +20,13 @@ namespace sdds {
 		virtual ~Vehicle();
 		void			setEmpty();
 		bool			isEmpty()const;
-		const char*		getLicensePlate()const;				// getter
-		const char*		getMakeModel()const;				// getter
-		void			setMakeModel(const char* value);	// setter
-		int				getParkingSpot()const;				// getter
-		void			setParkingSpot(int value);			// setter
-		bool operator==(const char* licensePlate) const;		// overload comparison operator
-		bool operator==(const Vehicle& v) const;				// overload comparison operator
+		const char*		getLicensePlate()const;
+		const char*		getMakeModel()const;
+		void			setMakeModel(const char* value);
+		int				getParkingSpot()const;
+		void			setParkingSpot(int value);
+		bool operator==(const char* licensePlate) const;
+		bool operator==(const Vehicle& v) const;
 		std::istream&	read(std::istream& istr);
 		std::ostream&	write(std::ostream& ostr) const;
 	};
