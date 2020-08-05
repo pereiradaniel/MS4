@@ -71,10 +71,8 @@ namespace sdds {
 	bool Vehicle::operator==(const char* licensePlate) const {
 		bool result = false;
 		if (!isEmpty() && licensePlate != nullptr && licensePlate[0] != '\0' && strlen(licensePlate) <= MAX_PLATE_CHARS) {
-			char* temp;
-			temp = new char[strlen(licensePlate) + 1];
+			char temp[MAX_PLATE_CHARS + 1];
 			strcpy(temp, licensePlate);
-			// Utils::toUpper(temp);
 			if (strcmp(temp, licensePlate) == 0) {
 				result = true;
 			}
@@ -110,7 +108,7 @@ namespace sdds {
 		else if (!isCsv()) {
 			cout << "Enter Licence Plate Number: ";
 			char t_licensePlate[9];
-			Utils::read(t_licensePlate, MAX_PLATE_CHARS, "Invalid Licence plate, try again: ", istr);
+			Utils::read(t_licensePlate, MAX_PLATE_CHARS, "Invalid Licence Plate, try again: ", istr);
 			strcpy(m_licensePlate, t_licensePlate);
 			Utils::toUpper(m_licensePlate);
 
